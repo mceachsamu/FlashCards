@@ -36,13 +36,22 @@ struct FlashCardNavigator: View {
             VStack {
                 FlashCardView(flipped: flipped, currentCard: flashCards[index])
             }.toolbar(content: {
-                Button(
-                    action: {
-                        self.flipped = !self.flipped
-                    }, label: {
-                        Text("Flip Card")
-                    }
-                )
+                HStack {
+                    Button(
+                        action: {
+                            self.flipCard()
+                        }, label: {
+                            Text("Add Card")
+                        }
+                    )
+                    Button(
+                        action: {
+                            self.flipCard()
+                        }, label: {
+                            Text("Flip Card")
+                        }
+                    )
+                }
             })
         }
         .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .global)
@@ -50,21 +59,28 @@ struct FlashCardNavigator: View {
                         let horizontalAmount = value.translation.width
                         let verticalAmount = value.translation.height
 
-                        if abs(horizontalAmount) > abs(verticalAmount) {
-                            // next card
-                            if (index < flashCards.endIndex - 1 && horizontalAmount < 0) {
-                                index = index + 1
-                                flipped = false
-                            }
-                            
-                            // previous card
-                            if (index > 0 && horizontalAmount > 0) {
-                                index = index - 1
-                                flipped = false
-                            }
-                        }
+                        self.scrollCard(horizontalAmount: horizontalAmount, verticalAmount: verticalAmount)
                     })
-        
+    }
+    
+    private func scrollCard(horizontalAmount : CGFloat, verticalAmount: CGFloat) {
+        if abs(horizontalAmount) > abs(verticalAmount) {
+            // next card
+            if (index < flashCards.endIndex - 1 && horizontalAmount < 0) {
+                index = index + 1
+                flipped = false
+            }
+            
+            // previous card
+            if (index > 0 && horizontalAmount > 0) {
+                index = index - 1
+                flipped = false
+            }
+        }
+    }
+    
+    private func flipCard() {
+        self.flipped = !self.flipped
     }
 }
 
