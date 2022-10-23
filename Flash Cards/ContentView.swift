@@ -28,7 +28,7 @@ struct FlashCardNavigator: View {
     @State public var flipped = false;
     @Environment(\.managedObjectContext) private var viewContext
 
-    var flashCards: [FlashCard] = []
+    @State public var flashCards: [FlashCard] = []
     @State var index: Int = 0
     
     var body: some View {
@@ -39,7 +39,7 @@ struct FlashCardNavigator: View {
                 HStack {
                     Button(
                         action: {
-                            self.flipCard()
+                            self.addCard()
                         }, label: {
                             Text("Add Card")
                         }
@@ -81,6 +81,19 @@ struct FlashCardNavigator: View {
     
     private func flipCard() {
         self.flipped = !self.flipped
+    }
+    
+    private func addCard() {
+        // only add a new card of the last card in the Deck is NOT BLANK
+        if (lastCardEmpty() == false) {
+            self.flashCards.append(FlashCard())
+        }
+        self.index = flashCards.endIndex - 1
+    }
+    
+    private func lastCardEmpty() -> Bool {
+        let card = self.flashCards[flashCards.endIndex - 1]
+        return card.contentSide1.text == "" && card.contentSide2.text == ""
     }
 }
 
