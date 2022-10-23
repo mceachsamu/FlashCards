@@ -11,9 +11,12 @@ import SwiftUI
 struct Flash_CardsApp: App {
     let persistenceController = PersistenceController.shared
 
+    var currentCard = FlashCard()
+    var nextCard = FlashCard()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FlashCardNavigator(flipped: false, flashCards: [currentCard, nextCard])
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -15,6 +15,7 @@
 		594871B329048C78005D4B18 /* Flash_Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 594871B129048C78005D4B18 /* Flash_Cards.xcdatamodeld */; };
 		594871BE29048C79005D4B18 /* Flash_CardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594871BD29048C79005D4B18 /* Flash_CardsTests.swift */; };
 		594871C929048C79005D4B18 /* Flash_CardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594871C829048C79005D4B18 /* Flash_CardsUITests.swift */; };
+		597C76E02904907A003A06C9 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597C76DF2904907A003A06C9 /* FlashCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		594871A329048C78005D4B18 /* Flash Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594871A629048C78005D4B18 /* Flash_CardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flash_CardsApp.swift; sourceTree = "<group>"; };
-		594871A829048C78005D4B18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		594871A829048C78005D4B18 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		594871AA29048C78005D4B18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		594871AD29048C78005D4B18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		594871AF29048C78005D4B18 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		594871C429048C79005D4B18 /* Flash CardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flash CardsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594871C829048C79005D4B18 /* Flash_CardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flash_CardsUITests.swift; sourceTree = "<group>"; };
 		594871CA29048C79005D4B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		597C76DF2904907A003A06C9 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				594871B429048C78005D4B18 /* Info.plist */,
 				594871B129048C78005D4B18 /* Flash_Cards.xcdatamodeld */,
 				594871AC29048C78005D4B18 /* Preview Content */,
+				597C76DF2904907A003A06C9 /* FlashCard.swift */,
 			);
 			path = "Flash Cards";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				594871A929048C78005D4B18 /* ContentView.swift in Sources */,
 				594871B329048C78005D4B18 /* Flash_Cards.xcdatamodeld in Sources */,
 				594871A729048C78005D4B18 /* Flash_CardsApp.swift in Sources */,
+				597C76E02904907A003A06C9 /* FlashCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
